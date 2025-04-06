@@ -14,7 +14,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             set -e
-            cd ${{ secrets.PATH }} && git pull
+            cd ${{ secrets.BLOG_PATH }} && git pull
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.2.2
