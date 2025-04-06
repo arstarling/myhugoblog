@@ -1,0 +1,62 @@
+baseURL: "https://arstarling.ru"
+languageCode: en-us
+title: arstarling.me
+theme: PaperMod
+
+params:
+  profileMode:
+    enabled: true
+    title: Arina Skvortsova
+    imageUrl: "img/choso.jpg"
+    imageTitle: my image
+    imageWidth: 120
+    imageHeight: 120
+    # buttons:
+    #   - name: Archives
+    #     url: archives
+    #   - name: Tags
+    #     url: tags
+
+  homeInfoParams:
+    Title: "H3ll0 $tr@ng3r"
+    Content: Welcome to my blog. Here you'll find a lot of cool information about a lot of cool stuff.
+  socialIcons:
+    - name: email
+      url: "arinaskvortsovaas@gmail.com"
+    - name: telegram
+      url: "https://t.me/ar_starling"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/arstarling/"
+    - name: github
+      url: "https://github.com/arstarling"
+
+
+  cover:
+    linkFullImages: true
+
+  ShowBreadCrumbs: true
+
+  ShowReadingTime: true
+
+  ShowShareButtons: true
+
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - indentifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40

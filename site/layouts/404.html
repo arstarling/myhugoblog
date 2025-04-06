@@ -1,0 +1,31 @@
+{{- define "main" }}
+<div class="not-found-container">
+    <h1 class="not-found-title">404</h1>
+    <p class="not-found-text">Page not found</p>
+    <a href="/" class="not-found-link">Back to the main page</a>
+</div>
+<style>
+    .not-found-container {
+        text-align: center;
+        margin-top: 10vh;
+    }
+    .not-found-title {
+        font-size: 5rem;
+        font-weight: bold;
+        color: #555;
+    }
+    .not-found-text {
+        font-size: 1.5rem;
+        color: #555;
+    }
+    .not-found-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: gray;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+{{- end }}
