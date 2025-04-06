@@ -1,0 +1,28 @@
+name: Deploying website
+run-name: ${{ github.actor }} is deploying his website 🚀
+on: [push]
+jobs:
+  Pull-And-Deploy-New-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull updates from github
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            set -e
+            cd ${{ secrets.PATH }} && git pull
+
+      - name: Deploy
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            set -e
+            ~/deploy.sh
