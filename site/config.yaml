@@ -3,7 +3,16 @@ languageCode: en-us
 title: arstarling.me
 theme: PaperMod
 
+enableRobotsTXT: true
+enableEmoji: true
+enableInlineShortcodes: true
+
 params:
+  env: production
+  defaultTheme: dark
+  author: Arina Skvortsova
+  DateFormat: "January 2, 2006"
+
   profileMode:
     enabled: true
     title: Arina Skvortsova
@@ -13,16 +22,17 @@ params:
     imageHeight: 120
     # buttons:
     #   - name: Archives
-    #     url: archives
+    #     url: /archives/
     #   - name: Tags
-    #     url: tags
+    #     url: /tags/
 
   homeInfoParams:
     Title: "H3ll0 $tr@ng3r"
     Content: Welcome to my blog. Here you'll find a lot of cool information about a lot of cool stuff.
+
   socialIcons:
     - name: email
-      url: "arinaskvortsovaas@gmail.com"
+      url: "mailto:arinaskvortsovaas@gmail.com"
     - name: telegram
       url: "https://t.me/ar_starling"
     - name: linkedin
@@ -30,17 +40,22 @@ params:
     - name: github
       url: "https://github.com/arstarling"
 
-
   cover:
     linkFullImages: true
 
   ShowBreadCrumbs: true
-
   ShowReadingTime: true
-
   ShowShareButtons: true
-
   ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  comments: false  # можно включить позже (например, Giscus)
+  hideSummary: false
+  hidemeta: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    disableHLJS: true
 
 menu:
   main:
@@ -52,7 +67,7 @@ menu:
       name: Categories
       url: /categories/
       weight: 20
-    - indentifier: archives
+    - identifier: archives     # была опечатка: indentifier → identifier
       name: Archives
       url: /archives/
       weight: 30
@@ -60,3 +75,14 @@ menu:
       name: About
       url: /about/
       weight: 40
+
+minify:
+  disableXML: false
+  minifyOutput: true
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
